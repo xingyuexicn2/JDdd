@@ -15,7 +15,7 @@ on:
 env:
   JD_COOKIE: ${{ secrets.JD_COOKIE }}
   JD_DUAL_COOKIE: ${{ secrets.JD_DUAL_COOKIE }}
-  PUSH_KEY: ${{ secrets.PUSH_KEY }}
+  # PUSH_KEY: ${{ secrets.PUSH_KEY }}
   UPLOAD_BESULT_DIR: true
 
 jobs:
@@ -43,5 +43,17 @@ jobs:
               with:
                 name: result
                 path: ./*.txt
-
-
+                
+            - name: Send Email
+              uses: dawidd6/action-send-mail@master
+              with:
+                serveraddress: smtp.163.com
+                serverport: 465
+                username: fnsflm@qq.com
+                password: ${{ secrets.MAILPASSWORD }}
+                subject: 京东
+                body: file://result.txt
+                to: fnsflm@qq.com
+                from: GitHub Actions
+                content_type: text/plain
+        
