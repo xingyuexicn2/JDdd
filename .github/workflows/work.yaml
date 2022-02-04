@@ -47,7 +47,7 @@ jobs:
             - name: Send Email
               uses: dawidd6/action-send-mail@master
               with:
-                serveraddress: smtp.163.com
+                server_address: smtp.qq.com
                 serverport: 465
                 username: fnsflm@qq.com
                 password: ${{ secrets.MAILPASSWORD }}
