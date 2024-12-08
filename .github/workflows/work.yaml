@@ -50,7 +50,7 @@ jobs:
    
                server_address: smtp.qiye.aliyun.com
    
-               server_port: 465
+               server_port: 25
  
                secure: true
    
