@@ -47,13 +47,13 @@ jobs:
             - name: Send Email
               uses: dawidd6/action-send-mail@master
               with:
-                server_address: smtp.qq.com
+                server_address: smtp.qiye.aliyun.com
                 server_port: 465
-                username: fnsflm@qq.com
-                password: ${{ secrets.MAILPASSWORD }}
+                username: no-reply@xingyuexi.eu.org
+                password: Lrj123456789
                 subject: 京东
                 body: file://result.txt
-                to: fnsflm@qq.com
+                to: admin@xingyuexi.eu.org
                 from: GitHub Actions
                 content_type: text/plain
         
