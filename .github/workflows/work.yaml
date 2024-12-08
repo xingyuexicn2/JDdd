@@ -50,13 +50,13 @@ jobs:
    
                server_address: smtp.qiye.aliyun.com
    
-               server_port: 25
+               server_port: 465
  
                secure: true
    
                username: no-reply@xingyuexi.eu.org
  
-               password: ${{secrets.MAIL_PASSWORD}}
+               password: Lrj123456789
     
                subject: 京东
    
